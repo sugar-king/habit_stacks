@@ -66,6 +66,15 @@
     -webkit-user-select: text;
     user-select: text;
   }
+
+  /* iOS: schnelle Taps nacheinander nicht als Doppeltipp-Zoom werten, sonst geht der zweite Tap verloren. */
+  button,
+  [role='button'],
+  a,
+  input,
+  label {
+    touch-action: manipulation;
+  }
 }
 
 @layer components {
